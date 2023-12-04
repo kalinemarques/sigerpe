@@ -6,7 +6,7 @@ class Mesa():
         self.__codigoGarcom = codigoGarcom
         self.__id = id
 
-        query="CREATE TABLE IF NOT EXISTS mesa(id INTEGER PRIMARY KEY AUTOINCREMENT, capacidade NUMERIC, status NUMERIC, codigoGarcom NUMERIC)" #se a tabela produtos ainda não existir, crio uma
+        query="CREATE TABLE IF NOT EXISTS mesa(id INTEGER PRIMARY KEY AUTOINCREMENT, capacidade NUMERIC, status NUMERIC, codigoGarcom NUMERIC)"
         _executar(query)
 
     def getId(self):
@@ -48,14 +48,6 @@ class Mesa():
         mesa = _executar(query)[0]
         mesa = Mesa(id=mesa[0], capacidade=mesa[1], codigoGarcom=mesa[2])
         return mesa
-
-
-    # Função para verificar o status do livro
-    def verificar_status(self):
-        if self.getStatus() == 1:  # Verifica se o status é disponível para empréstimo
-            return True
-        else:
-            return False
 
     #to string
     def __str__(self):
