@@ -2,8 +2,8 @@ from model.mesaModel import Mesa
 
 class CadastrarMesa:
     @staticmethod
-    def post(codigoGarcom,capacidade):
-        mesa = Mesa(codigoGarcom,capacidade)
+    def post(codigoGarcom, capacidade):
+        mesa = Mesa(codigoGarcom, capacidade)
         mesa.inserir()
 
 class AlterarMesa:
@@ -15,17 +15,16 @@ class AlterarMesa:
 class ExcluirMesa:
     @staticmethod
     def get(id):
-        mesa = Mesa(id)
+        mesa = Mesa.buscar_por_id(id)
         mesa.excluir()
 
 class ListarMesa:
     @staticmethod
-    def get(id):
-        mesa = Mesa(id)
-        mesa.listar()
+    def get():
+        print(Mesa.listar())
 
 class BuscarMesa:
     @staticmethod
     def get(id):
-        mesa = Mesa(id)
-        mesa.buscar_por_id()
+        mesa = Mesa.buscar_por_id(id)
+        print(mesa)

@@ -6,7 +6,7 @@ class Mesa():
         self.__codigoGarcom = codigoGarcom
         self.__id = id
 
-        query="CREATE TABLE IF NOT EXISTS mesa(id INTEGER PRIMARY KEY AUTOINCREMENT, capacidade NUMERIC, status NUMERIC, codigoGarcom NUMERIC)"
+        query="CREATE TABLE IF NOT EXISTS mesa(id INTEGER PRIMARY KEY AUTOINCREMENT, capacidade NUMERIC, codigoGarcom NUMERIC)"
         _executar(query)
 
     def getId(self):
