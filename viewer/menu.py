@@ -7,7 +7,6 @@ gerentes = {
     'kaline': {'kaline@gmail.com': 'Qw78@.'}
 }
 
-    
 def opcao2():
     email = input('Email: ')
     if valida.check(email):
@@ -16,7 +15,6 @@ def opcao2():
     else:
         print("Email inválido, por favor digite novamente.")
         email = input('Email: ')
-    
 
 def opcao1():
     usuario = input('Nome de Usuário: ')
@@ -58,8 +56,7 @@ def opcao1():
             else:
                 print("Opção inválida!")
         return True
-
-
+        
 escolha = input("""
                             SiGerPe
       Sistema de Gerenciamento de Pedidos para restaurantes
@@ -84,4 +81,3 @@ while True:
     if escolha == '3':
         print("Saindo do sistema...")
         break
-
