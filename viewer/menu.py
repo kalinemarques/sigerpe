@@ -85,6 +85,10 @@ verifica = False
 os.system('cls')
 
 while True:
+    while escolha not in {'1', '2'}:
+        print("Opção inválida.")
+        escolha = input("Digite novamente: ")
+
     if escolha == '1':
         if opcao1():
             break
@@ -96,5 +100,3 @@ while True:
     if escolha == '2':
         print("Saindo do sistema...")
         break
-    if escolha not in {'1', '2'}:
-        print("Opção inválida.")
