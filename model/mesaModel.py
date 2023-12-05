@@ -51,4 +51,4 @@ class Mesa():
 
     #to string
     def __str__(self):
-        return f"'{self.__id}', '{self.__capacidade}', '{self.__codigoGarcom}'"
+        return f"\nMESA_ID: {self.__id}\nCAPACIDADE_TOTAL: {self.__capacidade}\nGARÇOM_RESPONSÁVEL: {self.__codigoGarcom}"
