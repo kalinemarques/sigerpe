@@ -25,7 +25,7 @@ def validaEntrada(nome, senha):
         'kaliane': {'kaliane@gmail.com': 'amoGoiaba'},
         'daniel': {'daniel@gmail.com': '12345678'},
         'kaline': {'kaline@gmail.com': 'Qw78@.'},
-        'joamerson': {'jojo@gmail.com': 'senha'}
+        'joamerson': {'joamerson@gmail.com': 'senha'}
     }
 
     if nome in gerentes and senha == gerentes[nome].get(list(gerentes[nome].keys())[0]):
