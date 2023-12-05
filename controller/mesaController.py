@@ -8,8 +8,9 @@ class CadastrarMesa:
 
 class AlterarMesa:
     @staticmethod
-    def get(id):
-        mesa = Mesa(id)
+    def get(id, codigoGarcom):
+        mesa = Mesa.buscar_por_id(id)
+        mesa.setCodigoGarcom(codigoGarcom)
         mesa.alterar()
 
 class ExcluirMesa:
@@ -21,7 +22,9 @@ class ExcluirMesa:
 class ListarMesa:
     @staticmethod
     def get():
-        print(Mesa.listar())
+        mesa = Mesa.listar()
+        for mesa_info in mesa:
+            print(f'ID_MESA: {mesa_info[0]}, CAPACIDADE: {mesa_info[1]}, GARÇOM_RESPONSÁVEL: {mesa_info[2]}')
 
 class BuscarMesa:
     @staticmethod
